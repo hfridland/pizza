@@ -1,0 +1,8 @@
+.SubmenuItem {
+    background-color: white;
+    width: 49%;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 2px;
+}
+

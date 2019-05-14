@@ -1,0 +1,7 @@
+.Menu {
+    width: 60%;
+    background-color: #ccc;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+}

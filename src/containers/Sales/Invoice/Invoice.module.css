@@ -1,0 +1,19 @@
+.Invoice {
+    width: 30%;
+    background-color: white;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+td, th {
+    text-align: left;
+}
+
+.RightAlign {
+    text-align: right;   
+}
+
+.Invoice input {
+    display: block;
+}

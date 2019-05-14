@@ -7,6 +7,7 @@ const navigationItems = (props) => (
     <ul className={classes.NavigationItems}>
         <NavigationItem link="/" exact clicked={props.isSideDrawer ? props.clicked : ()=>{}} >Sales</NavigationItem>
         <NavigationItem link="/reports" clicked={props.isSideDrawer ? props.clicked : ()=>{}}>Reports</NavigationItem>
+        <NavigationItem link="/about" clicked={props.isSideDrawer ? props.clicked : ()=>{}}>About</NavigationItem>
     </ul>
 );
 
