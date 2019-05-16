@@ -9,6 +9,8 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import App from './App';
 import salesReducer from './store/reducers/sales';
+import authReducer from './store/reducers/auth';
+import reportsReducer from './store/reducers/reports';
 
 
 
@@ -16,7 +18,9 @@ import salesReducer from './store/reducers/sales';
 const composeEnhancers = (process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null) || compose;
 
 const rootReducer = combineReducers({
-    sales: salesReducer
+    sales: salesReducer,
+    auth: authReducer,
+    rep: reportsReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(

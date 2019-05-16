@@ -1,0 +1,21 @@
+.RepHdrForm {
+    background-color: silver;
+    padding: 5px 0;
+}
+
+.RepHdrForm label {
+    margin: 0 5px;
+}
+
+.Error {
+    color: red;
+    margin-left: 5px;
+}
+
+.RepHdrForm input {
+    margin-left: 5px;
+}
+
+.BtnLogout {
+    float: right;
+}

@@ -91,12 +91,13 @@ export const transactionPostFailed = () => {
     };
 }
 
-export const postTransaction = (transaction, total, customerName) => {
+export const postTransaction = (transaction, total, customerName, date) => {
     return dispatch => {
         const order = {
             transaction: transaction, 
             total: total, 
-            customerName: customerName
+            customerName: customerName,
+            date: date
         };
         axios.post('/orders.json', order)
             .then(response => {
@@ -111,7 +112,7 @@ export const postTransaction = (transaction, total, customerName) => {
 export const setCustomerName = (customerName) => {
     return {
         type: actionTypes.SALES_SET_CUSTOMERNAME,
-        customerName, customerName
+        customerName: customerName
     };
 }
 

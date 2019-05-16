@@ -12,11 +12,10 @@ const initialState = {
 }
 
 const recalcTransaction = (state, transaction) => {
-    let total = 0;
-    transaction.map(transItem => {
+    let total = transaction.reduce((s, transItem) => {
         transItem.total = transItem.qty * transItem.unitPrice;
-        total += transItem.total;
-    });
+        return s + transItem.total;
+    }, 0);
     state.total = total;
 }
 

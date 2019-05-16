@@ -1,0 +1,17 @@
+.LoginForm {
+    background-color: silver;
+    padding: 5px 0;
+}
+
+.LoginForm label {
+    margin: 0 5px;
+}
+
+.Error {
+    color: red;
+    margin-left: 5px;
+}
+
+.LoginForm input {
+    margin-left: 5px;
+}

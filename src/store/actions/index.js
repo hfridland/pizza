@@ -10,3 +10,12 @@ export {
     setCustomerName,
     clearModalMessage
 } from './sales';
+
+export {
+    auth,
+    logout
+} from './auth';
+
+export {
+    fetchOrders
+} from './reports';

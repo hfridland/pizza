@@ -20,7 +20,9 @@ class Invoice extends Component {
     }
 
     postTransaction = () => {
-        this.props.onPostTransaction(this.props.transaction, this.props.total, this.props.customerName);
+        const dt = new Date();
+        const sDate = dt.toISOString().split('T')[0];
+        this.props.onPostTransaction(this.props.transaction, this.props.total, this.props.customerName, sDate);
     }
 
     closeModal = () => {
@@ -79,7 +81,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onClearTransaction: () => dispatch(actions.clearTransaction()),
-        onPostTransaction: (transaction, total, customerName) => dispatch(actions.postTransaction(transaction, total, customerName)),
+        onPostTransaction: (transaction, total, customerName, date) => dispatch(actions.postTransaction(transaction, total, customerName, date)),
         onSetCustomerName: (customerName) => dispatch(actions.setCustomerName(customerName)),
         clearModalMessage: () => dispatch(actions.clearModalMessage())
     }
