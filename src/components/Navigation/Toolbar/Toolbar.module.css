@@ -4,7 +4,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #703B09;
+    /*background-color: #FFD700; /// #703B09;*/
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffd700+42,ffa500+100 */
+    background: #ffd700; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffd700 42%, #ffa500 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffd700 42%,#ffa500 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffd700 42%,#ffa500 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd700', endColorstr='#ffa500',GradientType=0 ); /* IE6-9 */
+
     display: flex;
     justify-content: space-between;
     align-items: center;

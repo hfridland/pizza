@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button, ButtonToolbar, Table, Form, FormControl } from 'react-bootstrap';
 
 import classes from './Invoice.module.css';
 import InvoiceItem from '../../../components/InvoiceItem/InvoiceItem';
@@ -45,7 +46,7 @@ class Invoice extends Component {
 
         return (
             <div className={classes.Invoice}>
-                <table>
+                <Table striped bordered hover size="sm" responsive="sm">
                     <tbody>
                         <tr>
                             <th>Name</th>
@@ -59,11 +60,20 @@ class Invoice extends Component {
                             <td className={classes.RightAlign}>${this.props.total.toFixed(2)}</td>
                         </tr>
                     </tbody>
-                </table>
+                </Table>
+                <Form>
+                    <Form.Control 
+                       type='text' 
+                       placeholder='Your Name' 
+                       size="sm"
+                       value={this.props.customerName} 
+                       onChange={ (event) => this.handleChange(event) } />
+                    <ButtonToolbar>
+                        <Button variant="primary" size="sm" active={!btnPostDisabled} onClick={this.postTransaction} >Post</Button>
+                        <Button variant="secondary" size="sm" onClick={this.clearTransaction} >Clear</Button>
+                    </ButtonToolbar>
 
-                <input type='text' placeholder='Your Name' value={this.props.customerName} onChange={ (event) => this.handleChange(event) } />
-                <button onClick={this.clearTransaction} >Clear</button>
-                <button disabled={btnPostDisabled} onClick={this.postTransaction} >Post</button>
+                </Form>
                 {modalDlg}
             </div>
         );

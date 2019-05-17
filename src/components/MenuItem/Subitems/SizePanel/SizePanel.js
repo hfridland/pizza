@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
 import classes from './SizePanel.module.css';
 import * as actions from '../../../../store/actions/index';
@@ -14,13 +15,21 @@ class SizePanel extends Component {
         this.props.onSetSize(this.props.name, size);
     }
 
+    /*
     handleChange = (event) => {
         this.setState({ size: event.target.value });
         this.props.onSetSize(this.props.name, event.target.value);
     }
+    */
+    handleChange = (value, event) => {
+       console.log('handleChange: ' + value); 
+       this.setState({ size: value });
+       this.props.onSetSize(this.props.name, value);
+    };
 
     render() {
         const content =  this.props.data.map((item, index) => (
+            /*
             <label key={index}>
                 <input
                     type='radio'
@@ -31,12 +40,22 @@ class SizePanel extends Component {
                      />
                 {item}
             </label>
+            */
+           <ToggleButton key={index} value={item} size="sm">{item}</ToggleButton>
         ));
         return (
+            /*
             <div className={classes.SizePanel}>
                 <label><strong>Size: </strong></label>
                 {content}
             </div>
+            */
+           <ToggleButtonGroup type="radio" className="sizes" 
+               name={this.props.name} 
+               defaultValue={this.state.size}
+               onChange={this.handleChange}>
+             {content}
+           </ToggleButtonGroup>
         );    
     }
 }

@@ -1,13 +1,17 @@
 .Invoice {
-    width: 30%;
+    width: 100%;
     background-color: white;
     padding: 10px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     vertical-align: text-top;
 }
 
 td, th {
     text-align: left;
+    padding: 5px;
 }
 
 .RightAlign {

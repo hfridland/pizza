@@ -11,7 +11,7 @@ import * as actions from '../../store/actions/index';
 
 export class Sales extends Component {
     state = {
-        menu: null//menuData
+        menu: null, //menuData
     }
 
     componentDidMount() {
@@ -50,8 +50,8 @@ export class Sales extends Component {
         return (
             <div className={classes.Sales}>
                 <h1>Pizza Sales</h1>
-                <Menu data={this.props.menu} />
                 <Invoice transaction={this.props.transaction} total={this.props.total} />
+                <Menu data={this.props.menu} />
             </div>
         );
     }

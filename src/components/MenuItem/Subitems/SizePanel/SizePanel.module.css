@@ -1,3 +1,7 @@
 .SizePanel {
     text-align: center;
 }
+
+.sizes.btn-group {
+    margin-bottom: 10px;
+}

@@ -12,3 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.btn-group-sm>.btn, .btn-sm {
+    margin: 5px 4px;
+}
+
+.sizes.btn-group {
+    margin-bottom: 10px;
+}
