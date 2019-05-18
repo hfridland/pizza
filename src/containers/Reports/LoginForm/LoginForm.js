@@ -31,6 +31,17 @@ class LoginForm extends Component {
             );
         }
 
+        /*return (
+            <form onSubmit={this.submitHandler}>
+                <ButtonToolbar>
+                    <Form.Group as={Row} controlId="formBasicEmail">
+                        <Form.Label column sm='2'>User Email (hfridland@shaw.ca):</Form.Label>
+                        <Form.Control type="email" placeholder="User email" value={this.state.email} />
+                    </Form.Group>
+                </ButtonToolbar>
+            </form>
+        );*/
+
         return (
             <form className={classes.LoginForm} onSubmit={this.submitHandler}>
                 <label>

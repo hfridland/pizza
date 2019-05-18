@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Button, ButtonToolbar, Table, Form, FormControl } from 'react-bootstrap';
 
+import classes from './SalesRep.module.css';
 import SalesRepItem from '../../../components/Reports/SalesRepItem/SalesRepItem';
+
 
 class SalesRep extends Component {
 
@@ -54,9 +57,9 @@ class SalesRep extends Component {
         });
 
         return (
-            <div>
+            <div className={classes.SalesRep}>
                 <h1>Sales Report</h1>
-                <table>
+                <Table striped bordered hover size="sm" responsive="sm">
                     <tbody>
                         <tr>
                             <th>Name</th><th>Qty</th><th>Unit Price</th><th>Total</th>
@@ -64,10 +67,10 @@ class SalesRep extends Component {
                         {report}
                         <tr style={{textAlign: 'right'}}>
                             <td colSpan='3'><strong>Total:</strong></td>
-                            <td>${total.toFixed(2)}</td>
+                            <td className={classes.RightAlign}>${total.toFixed(2)}</td>
                         </tr>
                     </tbody>
-                </table>
+                </Table>
             </div>
         );
     }
