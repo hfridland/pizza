@@ -4,7 +4,8 @@ import classes from './OrdersRepItem.module.css';
 import TransItem from './TransItem/TransItem';
 
 const ordersRepItem = (props) => {
-    const orderRepItems = props.order.transaction.map((transItem, index) => (<TransItem key={index} transItem={transItem} />));
+    console.log(props);
+    const orderRepItems = props.order.transaction != undefined ? props.order.transaction.map((transItem, index) => (<TransItem key={index} transItem={transItem} />)) : null;
     return (
         <div className={classes.OrdersRepItem}>
             Date: {props.order.date}<br/>

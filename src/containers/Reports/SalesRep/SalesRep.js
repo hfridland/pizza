@@ -18,19 +18,22 @@ class SalesRep extends Component {
 
     makeSalesRep = (orders) => {
         const repObj = orders.reduce((obj, order) => {
-            return order.transaction.reduce((obj, transItem) => {
-                const propName = transItem.headerName + '_' + transItem.itemName + '_' + transItem.size;
-                if (obj[propName] === undefined) {
-                    obj[propName] = {
-                        text: transItem.headerText + ' ' + transItem.itemText + ' ' + transItem.size,
-                        qty: transItem.qty,
-                        unitPrice: transItem.unitPrice
+            if (order.transaction !== undefined) {
+                return order.transaction.reduce((obj, transItem) => {
+                    const propName = transItem.headerName + '_' + transItem.itemName + '_' + transItem.size;
+                    if (obj[propName] === undefined) {
+                        obj[propName] = {
+                            text: transItem.headerText + ' ' + transItem.itemText + ' ' + transItem.size,
+                            qty: transItem.qty,
+                            unitPrice: transItem.unitPrice
+                        }
+                    } else {
+                        obj[propName].qty += transItem.qty;
                     }
-                } else {
-                    obj[propName].qty += transItem.qty;
-                }
-                return obj;
-            }, obj);
+                    return obj;
+                }, obj);    
+            }
+            return obj;
         }, {});
 
         const repArr = [];
