@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ButtonToolbar, Table, Form, FormControl } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 import classes from './SalesRep.module.css';
 import SalesRepItem from '../../../components/Reports/SalesRepItem/SalesRepItem';
@@ -46,8 +46,6 @@ class SalesRep extends Component {
             repObj: repObj,
             repArr: repArr
         });
-        //console.log('repObj', repObj);
-        //console.log('repArr', repArr);
     }
 
     render() {

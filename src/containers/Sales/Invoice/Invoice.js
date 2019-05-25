@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button, ButtonToolbar, Table, Form, FormControl } from 'react-bootstrap';
+import { Button, ButtonToolbar, Table, Form } from 'react-bootstrap';
 
 import classes from './Invoice.module.css';
 import InvoiceItem from '../../../components/InvoiceItem/InvoiceItem';

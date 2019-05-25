@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
-import classes from './SizePanel.module.css';
 import * as actions from '../../../../store/actions/index';
 
 class SizePanel extends Component {
@@ -22,7 +21,6 @@ class SizePanel extends Component {
     }
     */
     handleChange = (value, event) => {
-       console.log('handleChange: ' + value); 
        this.setState({ size: value });
        this.props.onSetSize(this.props.name, value);
     };

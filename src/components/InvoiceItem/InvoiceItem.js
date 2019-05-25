@@ -8,7 +8,6 @@ import * as actions from '../../store/actions/index';
 class InvoiceItem extends Component {
 
     changeQty = (deltaQty) => {
-        console.log(this.props.transItem);
         this.props.onChangeTransItem(this.props.transItem, deltaQty);
     }
 
