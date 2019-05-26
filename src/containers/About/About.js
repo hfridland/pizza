@@ -6,9 +6,18 @@ import avatar from '../../assets/images/avatar.png';
 class About extends Component {
 
     componentDidMount() {
-        const stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css", link = document.createElement("link");
+        let stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css";
+        let link = document.createElement("link");
         link.href = stylesheet;
         link.type = "text/css";
+        link.rel = "stylesheet";
+        link.media = "screen,print";
+        document.getElementsByTagName("head")[0].appendChild(link);
+
+        stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css";
+        link = document.createElement("link"); 
+        link.href = stylesheet;
+        link.type = "text/css"; 
         link.rel = "stylesheet";
         link.media = "screen,print";
         document.getElementsByTagName("head")[0].appendChild(link);
@@ -29,11 +38,21 @@ class About extends Component {
 
                 <div className={classes.Center}>
                     <h2>Certificates</h2>
-                    <a href="https://www.testdome.com/cert/24a7a41860cc4727b2fdd65655f6871b" className="testdome-certificate-stamp gold">
-                        <span className="testdome-certificate-name">Haim Fridland</span>
-                        <span className="testdome-certificate-test-name">JavaScript </span>
-                        <span className="testdome-certificate-card-logo">TestDome<br />Certificate</span>
-                    </a>
+                    <div className={classes.Certificates}>
+                        <a href="https://www.testdome.com/cert/24a7a41860cc4727b2fdd65655f6871b" className="testdome-certificate-stamp gold">
+                            <span className="testdome-certificate-name">Haim Fridland</span>
+                            <span className="testdome-certificate-test-name">JavaScript </span>
+                            <span className="testdome-certificate-card-logo">TestDome<br />Certificate</span>
+                        </a>
+
+                        <div className={classes.SertDivider}></div>
+
+                        <a href="https://www.testdome.com/cert/5d4efcbf15764abf9bc6f25dcc9a72dd" className="testdome-certificate-stamp gold">
+                            <span className="testdome-certificate-name">Haim Fridland</span>
+                            <span className="testdome-certificate-test-name">JavaScript with jQuery </span>
+                            <span className="testdome-certificate-card-logo">TestDome<br />Certificate</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 

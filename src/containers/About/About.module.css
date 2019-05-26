@@ -19,3 +19,11 @@
 .Center {
     text-align: center;
 }
+
+.Certificates {
+    display: flex;
+}
+
+.SertDivider {
+    width: 1em;
+}
