@@ -21,6 +21,22 @@ class About extends Component {
         link.rel = "stylesheet";
         link.media = "screen,print";
         document.getElementsByTagName("head")[0].appendChild(link);
+
+        stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css"; 
+        link = document.createElement("link"); 
+        link.href = stylesheet;
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.media = "screen,print";
+        document.getElementsByTagName("head")[0].appendChild(link);
+
+        stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css";
+        link = document.createElement("link"); 
+        link.href = stylesheet;
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.media = "screen,print";
+        document.getElementsByTagName("head")[0].appendChild(link);
     }
 
     render() {
@@ -52,6 +68,22 @@ class About extends Component {
                             <span className="testdome-certificate-test-name">JavaScript with jQuery </span>
                             <span className="testdome-certificate-card-logo">TestDome<br />Certificate</span>
                         </a>
+
+                        <div className={classes.SertDivider}></div>
+
+                        <a href="https://www.testdome.com/cert/ba54aab369b54f7daec571539f787b07" class="testdome-certificate-stamp gold">
+                            <span class="testdome-certificate-name">Haim Fridland</span>
+                            <span class="testdome-certificate-test-name">React </span>
+                            <span class="testdome-certificate-card-logo">TestDome<br />Certificate</span>
+                        </a>
+
+                        <div className={classes.SertDivider}></div>
+                        <a href="https://www.testdome.com/cert/0e64e00a770e48bfbf8d5abdb3d2a6f8" class="testdome-certificate-stamp gold">
+                            <span class="testdome-certificate-name">Haim Fridland</span>
+                            <span class="testdome-certificate-test-name">HTML/CSS </span>
+                            <span class="testdome-certificate-card-logo">TestDome<br />Certificate</span>
+                        </a>
+                            
                     </div>
                 </div>
             </div>
